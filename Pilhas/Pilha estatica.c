@@ -3,7 +3,7 @@
 
 struct Pilha
 {
-    int Pilhinha[20];
+    int Pilhinha[Max];
     int Top;
 };
 
@@ -28,17 +28,16 @@ int main(){
         printf("O que voce deseja fazer?\n");
         printf("1 Push\n");
         printf("2 Pop\n");
-        printf("3 Peek\n");
+        printf("3 Displaying stack\n");
 
         scanf("%d", &escolha);
         
-        switch (escolha)
-        {
+        switch(escolha){
+        
         case 1:
             printf("Qual elemento voce quer inserir?\n");
             scanf("%d", &elemento);
             push(&stack, elemento);
-
             break;
         
         case 2: 
@@ -69,8 +68,8 @@ void push(struct Pilha *ptr, int elemento){
 
     verificar = isFull(ptr);
 
-    if (verificar == 0)
-    {
+    if (verificar == 0){
+
         ptr->Pilhinha[ptr->Top + 1] = elemento;
         ptr->Top++;
     }
@@ -84,6 +83,7 @@ void push(struct Pilha *ptr, int elemento){
 int isFull(struct Pilha *ptr){
 
     if(ptr->Top >= Max-1){   
+        
         return -1;
     }
 
