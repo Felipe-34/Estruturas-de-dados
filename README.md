@@ -8,6 +8,7 @@ Eu estou usando o site [Programiz](https://www.programiz.com/dsa) e outros mater
 1 Estruturas de dados lineares.  
 
 * Pilhas 
+* Listas
 
 2 Estruturas de dados não lineares.  
 
